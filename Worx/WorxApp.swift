@@ -11,7 +11,9 @@ import SwiftUI
 struct WorxApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
+            NavigationStack{
+                WorkoutListScreen()
+            }
+        }.modelContainer(for: [Workout.self])
     }
 }
